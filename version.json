@@ -3,6 +3,18 @@
     {
       "path": "FUCK_GEMINI.py",
       "sha256": "4e3bf9624ee4ef264c4dde2a805b3a02231e1c3bc6b867bd803eace6dae12f97"
+    },
+    {
+      "path": "gra.json",
+      "sha256": "05eda55c93b0d077e7f848219336fa9a47cde438cae313b510cda0097d5751a4"
+    },
+    {
+      "path": "iphonowanie.py",
+      "sha256": "0f08bd78907591bf41f76207bef978bf55f7ee0ae337f166049c0206639cc681"
+    },
+    {
+      "path": "letssee.py",
+      "sha256": "e490c199ad5bf6425198338786ffba345764ad47612d544cd03bf573211121a1"
     }
   ]
 }
