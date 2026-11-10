@@ -1,0 +1,11 @@
+{
+    "day": 14,
+    "rep": 100,
+    "virus": 0,
+    "achievements": {
+        "die by virus": false,
+        "lose job": false,
+        "count null": 0,
+        "klauzula": true
+    }
+}
