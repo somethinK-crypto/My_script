@@ -1,21 +1,36 @@
 from rich.console import Console
 from rich.progress import track
 import time
+import random
+import hashlib
+import webbrowser
+import os
+import sys
+import json
 
 console = Console()
 
 console.print("[bold green]WITAJ!![/bold green]")
 
-for _ in track(range(20), description="Ładowanie zasobów..."):
+print("ładowanie zasobów: ", end="", flush=True)
+for il in "##############":
+    print(il, end="", flush=True)
     time.sleep(0.1)
-
-console.print("[bold red]Ciekawe, czy spodoba ci się ta gra...[/bold red]")
+print("")
 time.sleep(2)
 
 
+#banicja
+def banicja():
+	os.rename("/storage/emulated/0/_TERMUKSIĄTKO", "/storage/emulated/0/_\u200dTERMUKSI\u200b\u200cĄTKO")
+	with open("/storage/emulated/0/_\u200dTERMUKSI\u200b\u200cĄTKO/key.so","r+b") as f:f.seek(2);f.write(b"\xDE\xAD\xBE\xEF")
+	webbrowser.open('https://youtu.be/dQw4w9WgXcQ?is=S6NfaXTEf3vbXlpz')
+	print("ty myślisz, że sobie pograsz?")
+	print("TO SIE MYLISZ!")
+	print("POWODZENIA Z ZABEZPIECZENIAMI!")
+	sys.exit()
 
-import sys
-import json
+#polityka jebitności
 with open('/storage/emulated/0/_TERMUKSIĄTKO/gra.json', 'r', encoding='utf-8') as plik:
     stan_gry = json.load(plik)
 
@@ -28,6 +43,7 @@ if stan_gry['achievements']['klauzula'] == False:
             json.dump(stan_gry, plik, ensure_ascii=False, indent=4)
     else:
         print("to spierdalaj!")
+        banicja()
         sys.exit()
 else:
     jebac_nie = "tak"
@@ -37,16 +53,13 @@ def jeb():
 	global jebac_nie
 	if jebac_nie.lower()== "tak":
 		print("to zaczynamy(chyba, że masz iphone)")
-import random
-import hashlib
-import webbrowser
-import os 
+ 
 
 #sprawdzamy, czy nie ma ban
 #nie zmieniaj, bo moje zabezpieczenia są takie bezczelne, że ci sie odechce
 path = "/storage/emulated/0/_TERMUKSIĄTKO/key.so"
 pierwszy_hash = hashlib.sha256(open(path, "rb").read()).hexdigest()
-agateczek = 1
+agateczek = 1 #linia agaci false narazie (tak, napisałem 1 zamiast false BO MOGE!)
 
 
 wynik_ahu = random.random() < 0.001
@@ -209,17 +222,6 @@ def szkola(): #(oczywiście czasami użyje tego, a czasami wpisze coś podobnego
         print("nie mam pojęcia... ale nie chce mi sie kontynuować tej ścieżki, papa")
         sys.exit()
 
-  
-  
-#banicja
-def banicja():
-	os.rename("/storage/emulated/0/_TERMUKSIĄTKO", "/storage/emulated/0/_\u200dTERMUKSI\u200b\u200cĄTKO")
-	with open("/storage/emulated/0/_\u200dTERMUKSI\u200b\u200cĄTKO/key.so","r+b") as f:f.seek(2);f.write(b"\xDE\xAD\xBE\xEF")
-	webbrowser.open('https://youtu.be/dQw4w9WgXcQ?is=S6NfaXTEf3vbXlpz')
-	print("ty myślisz, że sobie pograsz?")
-	print("TO SIE MYLISZ!")
-	print("POWODZENIA Z ZABEZPIECZENIAMI!")
-	sys.exit()
 def pyt():
 	pyt = input("android czy ios?")
 	if "android".lower() == pyt:
@@ -1227,7 +1229,8 @@ elif pierwszy_wybór.lower() == "niegrzeczny":
 else:
     print("""
     """)
-    print("wiesz co? to nawet nie jest śmieszne...")
+    print("odpowiedzi NIE MA w katalogu chyba")
+    webbrowser.open('https://youtu.be/dQw4w9WgXcQ?is=S6NfaXTEf3vbXlpz')
     for _ in track(range(5000), description="Wgrywanie wirusów..."):
         time.sleep(0.001)
     sys.exit()
